@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "Text Formatter",
+    "version": "1.0",
+    "description": "Extract and format text from elements with 'segment-text' class",
+    "permissions": ["activeTab"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+"host_permissions": [
+  "https://www.youtube.com/*",
+  "https://m.youtube.com/*"
+]
+
+  }
+  
